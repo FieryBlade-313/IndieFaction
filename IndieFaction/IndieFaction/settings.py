@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # Custom Apps
     'accounts.apps.AccountsConfig',
     'colledition.apps.ColleditionConfig',
+    'order.apps.OrderConfig',
 ]
 
 MIDDLEWARE = [
