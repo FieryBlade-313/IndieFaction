@@ -1,3 +1,6 @@
 indo
 Screen*
-*/*/migrations/*
+/*/*/migrations/*
+!/*/*/migrations/__init.py__
+IndieFactio/*/__pycache__
+IndieFactio/db.sqlite3
