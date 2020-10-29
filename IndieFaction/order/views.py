@@ -27,3 +27,23 @@ def printOrder(request):
             return Response(serializer.data)
         else:
             return JsonResponse({'code': 400, 'message': 'Bad Input Parameter'})
+
+
+@api_view(['GET'])
+def completedOrder(request):
+
+    if request.method == 'GET':
+        if len(request.GET) == 1:
+            try:
+                token = request.GET['token']
+            except:
+                return JsonResponse({'code': 400, 'message': 'Bad Input Parameter'})
+            try:
+                order = CompletedOrder.objects.get(token=token)
+            except:
+                return JsonResponse({'code': 404, 'message': 'Invalid Token'})
+            serializer = PrintOrderSerializer(
+                order, context={'request': request})
+            return Response(serializer.data)
+        else:
+            return JsonResponse({'code': 400, 'message': 'Bad Input Parameter'})
