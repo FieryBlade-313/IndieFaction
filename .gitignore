@@ -1,5 +1,6 @@
 indo
 IndieFaction/*/__pycache__/*
 IndieFaction/db.sqlite3
+**/*.png
 /*/*/migrations/*
 !/*/*/migrations/__init__.py
