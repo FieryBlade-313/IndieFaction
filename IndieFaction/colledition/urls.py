@@ -13,13 +13,20 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.urls import path,include
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('api/collector_edition',views.fetch_or_create_ce,name='Fetch Collector Edition by name'),
-    path('api/collector_edition/author',views.fetch_ce_author,name='Fetch Collector Edition by Author name'),
-    path('api/collector_edition/game',views.fetch_ce_game_name,name='Fetch Collector Edition by Game name'),
-    path('api/collector_edition/random',views.fetch_ce_random,name='Fetch n Random Collector Editions'),
-    path('api/collector_edition/price',views.fetch_ce_price,name='Fetch Collector Editions based on Price'),
+    path('api/collector_edition', views.fetch_or_create_ce,
+         name='Fetch Collector Edition by name'),
+    path('api/collector_edition/edit', views.edit_ce,
+         name='Edit Collector Edition'),
+    path('api/collector_edition/author', views.fetch_ce_author,
+         name='Fetch Collector Edition by Author name'),
+    path('api/collector_edition/game', views.fetch_ce_game_name,
+         name='Fetch Collector Edition by Game name'),
+    path('api/collector_edition/random', views.fetch_ce_random,
+         name='Fetch n Random Collector Editions'),
+    path('api/collector_edition/price', views.fetch_ce_price,
+         name='Fetch Collector Editions based on Price'),
 ]
