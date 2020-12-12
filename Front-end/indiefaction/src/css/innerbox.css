@@ -1,0 +1,16 @@
+.content {
+    background-color: #c4c4c4;
+    height: 70%;
+    width: 80%;
+    margin: 10%;
+    box-shadow: 0px 4px 10px 0px #00000045 inset,0px -4px 10px 0px #00000045 inset;
+}
+
+#text{
+    font-size: 93%;
+    margin:5%;
+    text-align: center;
+}
+
+
+
