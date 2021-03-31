@@ -6,6 +6,7 @@ IndieFaction/db.sqlite3
 **/*.png
 **/*.jpg
 **/*.jpeg
+!Front-end/indiefaction/src/assets/*
 /*/*/migrations/*
 !/*/*/migrations/__init__.py
 
